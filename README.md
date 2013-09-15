@@ -1,4 +1,7 @@
 growbox-automation
 ==================
 
-Automation for growbox described at http://exotic-garden-at-home.blogspot.com
+
+Arduino Sketch.
+
+Автоматизация гроубокса описаного в боге [Экзотический сад дома](http://exotic-garden-at-home.blogspot.com "Экзотический сад дома")
