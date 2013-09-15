@@ -1,3 +1,16 @@
+/*
+ * This file is subject to the terms and conditions defined in
+ * file 'LICENSE', which is part of this source code package.
+ *
+ * Created by Max Lunin <nut.code/monkey@gmail.com> on 15/09/13.
+ *
+ * Arduino Sketch.
+ * Groubox automation described at http://exotic-garden-at-home.blogspot.com blog
+ *
+ * Required DallasTemperature_360 library
+ */
+
+
 #include <OneWire.h>
 #include <DallasTemperature.h>
 
