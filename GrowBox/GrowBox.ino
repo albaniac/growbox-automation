@@ -52,8 +52,8 @@ static const uint8_t DISPLAY_SCK  = 4;  // LCD Clk .... Pin 5 - Serial Clock Lin
                                         // LCD Gnd .... Pin 8 - земля                  
 static LCD5110* display = NULL;
 
-#define ON LOW
-#define OFF HIGH
+#define ON HIGH
+#define OFF LOW
 
 void turnFans(int flag)
 {
@@ -94,13 +94,13 @@ bool growBoxCurrentTemperature(float& temperature)
     return (countOfDevices > 0) && (fabs(temperature) > 0.000001);
 }
 
-const static float maxAllowedTemperature = 26.; // °C
-
 void floatFraction(float f, int& integralPart, int& fractionalPart)
 {
     integralPart = f;    
     fractionalPart = (f - (int)f) * 10;
 }
+
+const static float maxAllowedTemperature = 28.; // °C
 
 void updateDisplayWithTemperature(float temperature)
 {
@@ -137,9 +137,7 @@ void displayNoConnectedSensors()
 void loop()
 {
     float growBoxTemperature;
-    
-    
-    
+
     if( !growBoxCurrentTemperature(growBoxTemperature) )
     {
         displayNoConnectedSensors();
@@ -152,10 +150,12 @@ void loop()
     
     if( growBoxTemperature > maxAllowedTemperature )
     {
+        Serial.println("ON");
         turnFans(ON);
     }
     else
     {
+        Serial.println("ON");
         turnFans(OFF);
     }
 
