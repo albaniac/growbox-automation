@@ -91,7 +91,7 @@ bool growBoxCurrentTemperature(float& temperature)
         temperature = sensors->getTempCByIndex(0);
     }
     
-    return countOfDevices > 0;
+    return (countOfDevices > 0) && (fabs(temperature) > 0.000001);
 }
 
 const static float maxAllowedTemperature = 26.; // °C
@@ -137,6 +137,8 @@ void displayNoConnectedSensors()
 void loop()
 {
     float growBoxTemperature;
+    
+    
     
     if( !growBoxCurrentTemperature(growBoxTemperature) )
     {
