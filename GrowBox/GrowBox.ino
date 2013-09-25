@@ -1,16 +1,14 @@
-/*
- * This file is subject to the terms and conditions defined in
+/* This file is subject to the terms and conditions defined in
  * file 'LICENSE', which is part of this source code package.
  *
- * Created by Max Lunin <nut.code/monkey@gmail.com> on 15/09/13.
+ * Created by Max Lunin <nut.code.monkey@gmail.com> on 15/09/13.
  *
  * Arduino Sketch.
  * Groubox automation described at http://exotic-garden-at-home.blogspot.com blog
  *
  * Required OneWire library
  * Required DallasTemperature_360 library
- * Required LCD5110_Graph library
- */
+ * Required LCD5110_Graph library */
   
 #include <OneWire.h>
 #include <DallasTemperature.h>
@@ -28,7 +26,6 @@ static const uint8_t TEMPERATURE_SENSOR_PIN = 2;
 /* Подключение Реле:
  * Источник http://arduino-ua.com/prod203-8mi_kanalnii_modyl_rele_5V_10A
  * Плата реле /  Arduino
- *
  * VCC - +5 V
  * GND - GND
  * IN1 - FAN_PIN (3) */
